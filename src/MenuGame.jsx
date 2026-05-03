@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './MenuGame.css';
 import {
   Play,
   Search,
@@ -11,7 +11,7 @@ import {
   Zap,
 } from 'lucide-react';
 
-const MOCK_GAMES = [
+const INITIAL_GAMES = [
   {
     id: 1,
     title: 'League of Legends',
@@ -71,6 +71,7 @@ const MOCK_GAMES = [
   },
 ];
 
+
 const FEATURED_GAME = {
   title: 'Black Myth: Wukong',
   description: 'Khám phá thế giới huyền thoại Tây Du Ký trong tựa game hành động AAA đẳng cấp thế giới. Hóa thân thành Tề Thiên Đại Thánh, chiến đấu với thần linh và quái vật.',
@@ -120,7 +121,7 @@ function GameCard({ game }) {
               className="w-full flex items-center justify-center gap-1.5 py-2 rounded-lg bg-game-neon text-game-deep font-bold text-xs transition-all hover:brightness-110 active:scale-95"
             >
               <Play size={12} fill="currentColor" />
-              PLAY NOW
+              PLAY 
             </button>
           </div>
         </div>
@@ -133,7 +134,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('Tất cả');
 
-  const filteredGames = MOCK_GAMES.filter((game) => {
+  const filteredGames = INITIAL_GAMES.filter((game) => {
     const matchSearch = game.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchCategory = activeCategory === 'Tất cả' || game.category === activeCategory;
     return matchSearch && matchCategory;
@@ -168,6 +169,7 @@ function App() {
             </button>
           ))}
         </nav>
+
       </aside>
 
       {/* ── Main ────────────────────────────────────── */}
