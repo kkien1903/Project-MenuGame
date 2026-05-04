@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Plus, Users, Shield, Pencil, Trash2, X, Check, AlertTriangle, ChevronLeft } from 'lucide-react';
-import { StatCard, Field, inputCls } from './Shared';
+import { StatCard, Field, inputCls } from './SharedComponents';
 
 const INITIAL_USERS = [
   { id: 1, username: 'admin', email: 'admin@game.com', role: 'Admin', status: 'Hoạt động', joinDate: '2024-01-10' },

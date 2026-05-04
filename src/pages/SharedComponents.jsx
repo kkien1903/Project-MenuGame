@@ -1,11 +1,17 @@
 import React from 'react';
 
 export function StatCard({ icon: Icon, label, value, accent }) {
+
+  if (!Icon) return null;
+
   return (
     <div className="flex items-center gap-4 bg-game-card border border-white/[0.06] rounded-xl p-4">
       <div
         className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-        style={{ background: `${accent}18`, border: `1px solid ${accent}33` }}
+        style={{ 
+          background: `${accent}18`, 
+          border: `1px solid ${accent}33` 
+        }}
       >
         <Icon size={18} style={{ color: accent }} />
       </div>
@@ -17,6 +23,7 @@ export function StatCard({ icon: Icon, label, value, accent }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const inputCls = (error) => {
   return `w-full bg-white/[0.05] border ${
     error ? 'border-red-500/50' : 'border-white/[0.08]'

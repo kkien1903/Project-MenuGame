@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Plus, Gamepad2, LayoutGrid, Pencil, Trash2, X, Check, AlertTriangle, Shield, ChevronLeft } from 'lucide-react';
-import { StatCard, Field, inputCls } from './Shared';
+import { StatCard, Field, inputCls } from './SharedComponents';
 
 const CATEGORY_OPTIONS = ['MOBA', 'FPS', 'Action', 'Battle Royale', 'RPG', 'Sports', 'Strategy'];
 

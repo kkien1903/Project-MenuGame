@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Plus, Tags, Pencil, Trash2, X, Check, AlertTriangle, ChevronLeft, LayoutGrid } from 'lucide-react';
-import { StatCard, Field, inputCls } from './Shared';
+import { StatCard, Field, inputCls } from './SharedComponents';
 
 const INITIAL_CATEGORIES = [
   { id: 1, name: 'MOBA', description: 'Đấu trường trực tuyến nhiều người chơi', gameCount: 1 },
